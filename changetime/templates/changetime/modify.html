@@ -1,0 +1,10 @@
+<h1>修改服务器时间</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<form action="{% url 'changetime:change' %}" method="post">
+{% csrf_token %}
+<input type="date" name="modifytime" id="modify1" value="1" />
+<label>修改时间</label>
+
+<input type="submit" value="Modify" />
+</form>
